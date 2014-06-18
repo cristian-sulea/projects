@@ -1,0 +1,106 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+
+	<groupId>net.sulea.cristian</groupId>
+	<artifactId>projects</artifactId>
+	<packaging>pom</packaging>
+
+
+	<version>1</version>
+
+
+	<name>Cristian Sulea - Projects Parent</name>
+	<description>The Projects Parent POM provides common settings for all projects.</description>
+	<url>http://cristian.sulea.net/projects/</url>
+
+
+	<organization>
+		<name>Cristian Sulea</name>
+		<url>http://cristian.sulea.net</url>
+	</organization>
+
+
+	<inceptionYear>2014</inceptionYear>
+
+
+	<licenses>
+		<license>
+			<name>GNU Lesser General Public License, Version 3</name>
+			<url>http://www.gnu.org/licenses/lgpl.txt</url>
+		</license>
+	</licenses>
+
+
+	<properties>
+
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+
+		<distribution.site.id>distribution.site.id</distribution.site.id>
+		<distribution.site.url>file://c:/Temp/www.cristian.sulea.net/projects</distribution.site.url>
+	</properties>
+
+
+	<distributionManagement>
+		<site>
+			<id>${distribution.site.id}</id>
+			<url>${distribution.site.url}</url>
+		</site>
+	</distributionManagement>
+
+
+	<modules>
+		<module>../../../../JACo Watermark/Git Repositories/jaco-watermark/jaco-watermark</module>
+	</modules>
+
+
+	<build>
+		<plugins>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.1</version>
+				<configuration>
+					<source>1.7</source>
+					<target>1.7</target>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-site-plugin</artifactId>
+				<version>3.3</version>
+			</plugin>
+
+		</plugins>
+	</build>
+
+
+	<reporting>
+		<plugins>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-project-info-reports-plugin</artifactId>
+				<version>2.7</version>
+				<reportSets>
+					<reportSet>
+						<reports>
+							<report>index</report>
+							<report>summary</report>
+							<report>dependencies</report>
+							<report>project-team</report>
+							<report>license</report>
+						</reports>
+					</reportSet>
+				</reportSets>
+			</plugin>
+
+		</plugins>
+	</reporting>
+
+
+</project>
